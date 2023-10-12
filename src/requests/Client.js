@@ -12,8 +12,8 @@ export default {
         return fetch(urlAPI+'client/insert', {
             method: 'POST',
             body: JSON.stringify({
-                "name_client":client.name_client,
-                "created_by":localStorage.getItem('id_user'),
+                "nameClient":client.name_client,
+                "createdBy":localStorage.getItem('id_user'),
                 }),
             headers: {
                 'Content-Type': 'application/json'
@@ -24,11 +24,11 @@ export default {
     },
 
     updateClient: async (client) => {
-        return fetch(urlAPI+'client/update/'+client.id_client, {
+        return fetch(urlAPI+'client/update/'+client.idClient, {
             method: 'POST',
             body: JSON.stringify({
-                "name_client":client.name_client,
-                "updated_by":localStorage.getItem('id_user'),
+                "nameClient":client.nameClient,
+                "updatedBy":localStorage.getItem('id_user'),
                 }),
             headers: {
                 'Content-Type': 'application/json'

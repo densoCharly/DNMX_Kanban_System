@@ -76,7 +76,7 @@ const handleChangeRowsPerPage = (event) => {
       })
     }else{
       const data = {
-        "name_client":nameClient,
+        "nameClient":nameClient,
       }
       Client.addClient(data).then((res) => {
         if(res.id_inserted){
@@ -172,8 +172,8 @@ const handleChangeRowsPerPage = (event) => {
     e.preventDefault();
     if(nameClient){
       const data = {
-        "name_client":nameClient,
-        "id_client":idClient
+        "nameClient":nameClient,
+        "idClient":idClient
       }
       Client.updateClient(data).then(() => {
         Swal.fire({

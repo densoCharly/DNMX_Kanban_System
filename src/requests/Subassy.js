@@ -143,9 +143,9 @@ export default {
             .then(res => res.json())
     },
 
-    pruebaURL: () => {
-        alert(config.serviceURL());
-    },
+    // pruebaURL: () => {
+    //     alert(config.serviceURL());
+    // },
 
 
 }

@@ -52,11 +52,11 @@ export default {
         return fetch(urlAPI+'area/insert', {
             method: 'POST',
             body: JSON.stringify({
-                "name_area":area.name_area,
+                "nameArea":area.nameArea,
                 "status":1,
-                "id_department":area.id_department,
-                "created_by":localStorage.getItem('id_user'),
-                "updated_by":localStorage.getItem('id_user')
+                "idDepartment":area.idDepartment,
+                "createdBy":localStorage.getItem('id_user'),
+                "updatedBy":localStorage.getItem('id_user')
                 }),
             headers: {
                 'Content-Type': 'application/json'
@@ -65,14 +65,14 @@ export default {
             .then(res => res.json())
             .catch(err => console.error(err));
     },
-//10.72.116.167
+
     updateArea: async (area) => {
-        return fetch(urlAPI+'area/update/' + area.id_area, {
+        return fetch(urlAPI+'area/update/' + area.idArea, {
             method: 'POST',
             body: JSON.stringify({
-                "name_area":area.name_area,
-                "id_department":area.id_department,
-                "updated_by":localStorage.getItem('id_user')
+                "nameArea":area.nameArea,
+                "idDepartment":area.idDepartment,
+                "updatedBy":localStorage.getItem('id_user')
                 }),
             headers: {
                 'Content-Type': 'application/json'

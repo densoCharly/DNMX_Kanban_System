@@ -51,7 +51,6 @@ const ComponentPage = () => {
 
   const getComponentList = async () => {
     const resp2 = await Components.getComponentsWMS();
-    console.log(resp2);
     setComponentList(resp2);
   }
   const getThermalComponents = async () => {

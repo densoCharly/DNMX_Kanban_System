@@ -3,7 +3,7 @@ import EscPosEncoder from 'esc-pos-encoder';
 import net from 'net';
 
 const PrinterComponent = () => {
-    const [ipAddress, setIpAddress] = useState('192.168.192.168'); // Reemplaza con la dirección IP de tu impresora
+    const [ipAddress, setIpAddress] = useState('0.0.0.0'); // Reemplaza con la dirección IP de tu impresora
     const [port, setPort] = useState(9100); // Reemplaza con el puerto de tu impresora (por defecto es 9100)
     const encode = new EscPosEncoder();
   // Función para enviar comandos de impresión a través de Ethernet

@@ -68,11 +68,7 @@ const AsignPage = () => {
         'trainCode': trainCode,
         'lot': lot,
       }
-      console.log("Datos enviados");
-      console.log(data);
       Train.asignTrain(data).then( (res) => {
-        console.log(res.id_asigned);
-        console.log(res);
         if(res.id_asigned){
           Swal.fire({
             position: 'center',
@@ -101,8 +97,6 @@ const AsignPage = () => {
             'trainCode': 'no hay',
             'lot': lot,
           }
-          console.log("Datos enviados");
-          console.log(data);
         Swal.fire({
             position: 'center',
             icon: 'error',
@@ -122,7 +116,7 @@ const AsignPage = () => {
             setIdLine(event);
             try {
                 const resp = await LocalComponents.getFilterList(event);
-                console.log("Resdefuncion= ",resp);
+                // console.log("Resdefuncion= ",resp);
                 if(Boolean(resp.error)){
                   
                     Swal.fire({

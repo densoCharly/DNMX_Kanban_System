@@ -60,8 +60,8 @@ const AreaPage = () => {
       })
     }else{
       const data = {
-        "name_area":nameArea,
-        "id_department":idDepartment
+        "nameArea":nameArea,
+        "idDepartment":idDepartment
       }
       Area.saveArea(data).then(() => {
         Swal.fire({
@@ -153,9 +153,9 @@ const AreaPage = () => {
     e.preventDefault();
     if(nameArea && idDepartment){
       const data = {
-        "name_area":nameArea,
-        "id_department":idDepartment,
-        "id_area":idArea
+        "nameArea":nameArea,
+        "idDepartment":idDepartment,
+        "idArea":idArea
       }
       Area.updateArea(data).then(() => {
         Swal.fire({

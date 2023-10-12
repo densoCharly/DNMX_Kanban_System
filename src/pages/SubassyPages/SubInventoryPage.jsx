@@ -105,7 +105,7 @@ const SubInventoryPage = () => {
       }
     }
     const captureStock = (e) => {
-      if(e > 0){
+      if(e >= 0){
         setStock(e);      
       }else{
         Swal.fire({

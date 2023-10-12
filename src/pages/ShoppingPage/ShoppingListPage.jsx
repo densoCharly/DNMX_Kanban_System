@@ -20,7 +20,7 @@ const ShoppingListPage = () => {
         setCodeTrain(id);
         if(id!=""){
               await Train.getComponentsByTrain(id).then((res) => {
-                    console.log(res);
+                    
                     if(res.length > 0){
                         res.sort((x, y) => x.kind.localeCompare(y.kind))
                         setComponentsList(res);
@@ -37,7 +37,7 @@ const ShoppingListPage = () => {
                         });
                     }
                 }).catch(err => {
-                    console.log(err)
+                    
                     Swal.fire({
                         position: 'center',
                         icon: 'error',
@@ -82,8 +82,6 @@ const ShoppingListPage = () => {
     }
 
     const partialClose = (event) => {
-        alert("hola");
-        alert(event);
         setIdCloseList(event);
     }
 
